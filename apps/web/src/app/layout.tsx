@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Appbar } from "./components/Appbar.tsx";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,9 +18,12 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <Appbar/>
-      {children}</body>
+      <body className={`${inter.className} bg-baseBackgroundL0`}>
+        <Appbar />
+        <div className="thin-scroll flex flex-1 flex-col overflow-y-auto bg-baseBackgroundL0 text-baseTextHighEmphasis">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
