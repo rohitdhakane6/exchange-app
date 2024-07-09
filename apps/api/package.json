@@ -15,8 +15,11 @@
     "preset": "@repo/jest-presets/node"
   },
   "dependencies": {
+    "@types/pg": "^8.11.6",
     "cors": "^2.8.5",
-    "express": "^4.18.3"
+    "express": "^4.18.3",
+    "pg": "^8.12.0",
+    "redis": "^4.6.15"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
